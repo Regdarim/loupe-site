@@ -5,7 +5,7 @@ import { schemaTypes } from './schemaTypes';
 export default defineConfig({
   name: 'default',
   title: 'LØUPE CMS',
-  projectId: process.env.SANITY_STUDIO_PROJECT_ID || 'YOUR_SANITY_PROJECT_ID',
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID || '7phh38h0',
   dataset: process.env.SANITY_STUDIO_DATASET || 'production',
   basePath: '/studio',
   plugins: [deskTool()],

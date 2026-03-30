@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
-    "build:studio": "npm --prefix studio install && npm --prefix studio run build",
-    "vercel-build": "npm run build && npm run build:studio && mkdir -p dist/studio && cp -R studio/dist/. dist/studio",
+    "build:studio": "cd studio && npm install && npx sanity build --dir dist",
+    "vercel-build": "npm run build && npm run build:studio && mkdir -p dist/studio && cp -r studio/dist/. dist/studio/ && echo 'Studio copied successfully' && ls dist/studio/ | head -5",
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit"

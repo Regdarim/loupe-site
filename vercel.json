@@ -8,11 +8,11 @@
       "destination": "/studio/index.html"
     },
     {
-      "source": "/studio/:path*",
-      "destination": "/studio/:path*"
+      "source": "/studio/((?!.*\\..*).+)",
+      "destination": "/studio/index.html"
     },
     {
-      "source": "/:path*",
+      "source": "/((?!studio)(?!.*\\..*).+)",
       "destination": "/index.html"
     }
   ]

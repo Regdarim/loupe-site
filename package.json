@@ -6,11 +6,15 @@
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
+    "build:studio": "npm --prefix studio install && npm --prefix studio run build",
+    "vercel-build": "npm run build && npm run build:studio && mkdir -p dist/studio && cp -R studio/dist/. dist/studio",
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit"
   },
   "dependencies": {
+    "@sanity/client": "^7.10.0",
+    "@sanity/image-url": "^1.1.0",
     "@google/genai": "^1.29.0",
     "@tailwindcss/vite": "^4.1.14",
     "@vitejs/plugin-react": "^5.0.4",

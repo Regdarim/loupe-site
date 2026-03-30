@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
-    "build:studio": "cd studio && npm install && npx sanity build --dir dist",
+    "build:studio": "cd studio && npm install && npx sanity build --dir dist && sed -i 's|src=\"/static/|src=\"/studio/static/|g; s|href=\"/static/|href=\"/studio/static/|g; s|href=\"/favicon|href=\"/studio/favicon|g; s|content=\"/static/|content=\"/studio/static/|g' dist/index.html",
     "vercel-build": "npm run build && npm run build:studio && mkdir -p dist/studio && cp -r studio/dist/. dist/studio/ && echo 'Studio copied successfully' && ls dist/studio/ | head -5",
     "preview": "vite preview",
     "clean": "rm -rf dist",

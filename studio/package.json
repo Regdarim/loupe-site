@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "sanity dev",
-    "build": "sanity build",
+    "build": "sanity build --base-path /studio",
     "deploy": "sanity deploy"
   },
   "dependencies": {
